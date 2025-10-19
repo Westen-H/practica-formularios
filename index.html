@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Society | Formulario de inscripción</title>
+</head>
+<body>
+
+    <header>
+        <h1>Chess Society</h1>
+        <h2>Bienvenido al mundo del ajedrez</h2>
+         <nav>
+           <ul>
+               <li><a href="#chessUs">Quiénes Somos</a></li>
+               <li><a href="#join">Unirme</a></li>
+               <li><a href="#contact">Contacto</a></li>
+           </ul>
+         </nav>
+    </header>
+    <main>
+      <form class="grid" action="#" method="post" autocomplete="on" aria-labelledby="form-title">
+        <h2 id="form-title">Formulario de inscripción</h2>
+        <div>
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <div class="grid grid1">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" autocomplete="given-name" required>
+
+                    <label for="surnames">Apellidos</label>
+                    <input type="text" id="surnames" name="surnames" autocomplete="family-name" required>
+
+                    <label for="age">Edad</label>
+                    <input type="number" id="age" name="age" value="" required min="16" max="120">
+
+                    <fieldset>
+                        <legend>Sexo</legend>
+                        <label><input type="radio" name="sex" value="Masculino" required>Masculino</label>
+                        <label><input type="radio" name="sex" value="Femenino">Femenino</label>
+                    </fieldset>
+                    
+                    <label for="message">Cuéntanos algo sobre ti</label>
+                    <textarea id="message" name="message" placeholder="Escribir aquí..." rows="5" maxlength="500"></textarea>
+                </div>
+            </fieldset>
+        </div>
+            
+        <div>
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <div class="grid grid3">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="" placeholder="ejemplo@ejemplo.com" autocomplete="email" required>
+                <label for="phone">Tel</label>
+                <input type="tel" id="phone" name="tel" inputmode="tel" pattern="^\+34\s?[6789]\d{8}$" placeholder="+34 xxxxxxxxx" title="Formato: +34 612345678" autocomplete="tel">
+                </div>
+                <div class="privacy">
+                    <label><input name="privacy" type="checkbox" required> He leído y acepto la <a href="#politicadeprivacidad" target="_blank" rel="noopener noreferrer">política de privacidad</a></label>
+                </div>
+            </fieldset>
+            
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 . Todos los derechos reservados.</p>
+        <p><a href="mailto:contacto@chesssociety.com">contacto@chesssociety.com</a></p>
+    </footer>
+    
+</body>
+</html
