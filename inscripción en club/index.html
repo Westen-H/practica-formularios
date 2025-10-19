@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Society | Formulario de inscripción</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
+    <div class="container">
     <header>
-        <h1>Chess Society</h1>
-        <h2>Bienvenido al mundo del ajedrez</h2>
-         <nav>
-           <ul>
-               <li><a href="#chessUs">Quiénes Somos</a></li>
-               <li><a href="#join">Unirme</a></li>
-               <li><a href="#contact">Contacto</a></li>
-           </ul>
-         </nav>
+        <div class="container contain1">
+            <h1>Chess Society</h1>
+            <h2>Bienvenido al mundo del ajedrez</h2>
+        </div>
+        <div class="container contain2">
+            <nav>
+                <ul>
+                    <li><a href="#chessUs">Quiénes Somos</a></li>
+                    <li><a href="#join">Unirme</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
+    <h3 id="form-title">Formulario de inscripción</h3>
       <form class="grid" action="#" method="post" autocomplete="on" aria-labelledby="form-title">
-        <h2 id="form-title">Formulario de inscripción</h2>
-        <div>
+        
+        <div class="container contain3">
             <fieldset>
                 <legend>Datos personales</legend>
 
-                <div class="grid grid1">
+                <div class="contain3-1 ">
                     <label for="name">Nombre</label>
                     <input type="text" id="name" name="name" autocomplete="given-name" required>
 
@@ -47,7 +54,7 @@
             </fieldset>
         </div>
             
-        <div>
+        <div class="container contain4">
             <fieldset>
                 <legend>Datos de contacto</legend>
                 <div class="grid grid3">
@@ -61,15 +68,19 @@
                 </div>
             </fieldset>
             
+            <button type="submit">Enviar</button>
         </div>
-        <button type="submit">Enviar</button>
+        
       </form>
     </main>
+    
 
     <footer>
         <p>&copy; 2025 . Todos los derechos reservados.</p>
         <p><a href="mailto:contacto@chesssociety.com">contacto@chesssociety.com</a></p>
     </footer>
+    </div>
+    
     
 </body>
 </html
