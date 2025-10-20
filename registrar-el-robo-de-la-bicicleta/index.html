@@ -1,35 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro: robo de bicicleta</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     
     <div class="container">
-        <Header>
+        <header>
             <h1>Registrar el robo de la bicicleta</h1>
-        </Header>
+        </header>
         <main>
-            <form action="">
+            <form action="#">
                 <fieldset>
                     <legend>Detalles del suceso</legend>
+                    <div class="contain">
+                        <label for="dia">Día<input type="date" id="dia" name="dia" required></label>
 
-                    <label for="">Día</label>
-                    <input type="date">
+                        <label for="hora">Hora<input type="time" id="hora" name="hora" required></label>
+                        
+                        <label for="color">Color de la bicicleta<input type="color" id="color" name="color" required></label>
+                        
+                        <label for="precio">Rango de precio<small>(0 € – 10.000 €)</small>
+                        <input type="range" id="precio" name="precio" required min="0" max="10000"></label>
+                        
+                        <label for="precio-aproximado"><input type="checkbox" id="precio-aproximado" name="precio_aproximado"> Marcar si es aproximado</label>
+                    </div>
 
-                    <label for="">Hora</label>
-                    <input type="time">
+                    <div class="contain">
+                        <div>
+                            <label for="tipo">Tipo de bicicleta
+                                <select name="tipo" id="tipo">
+                                <optgroup label="Urbana y ciudad">
+                                    <option value="urbana">Urbana</option>
+                                    <option value="clasica">Bicicleta Clásica</option>
+                                    <option value="plegable">Bicicleta Plegable</option>
+                                    <option value="electrica">Bicicleta Eléctrica</option>
+                                    <option value="commuter">Bicicleta Commuter</option>
+                                </optgroup>
+                                <optgroup label="Montaña y sport">
+                                    <option value="montaña">Montaña</option>
+                                    <option value="sport">Bicicletas de tipo Sport</option>
+                                    <option value="trail-hardtail">Bicicletas de tipo Trail o Hard Tail</option>
+                                    <option value="xc-cross-contry">Bicicletas para XC o Cross Country</option>
+                                    
+                                </optgroup>
+                                <optgroup label="Carretera / carreras">
+                                    <option value="carretera">Carreras</option>
+                                    <option value="gran fondo">Bicicletas Gran Fondo</option>
+                                    <option value="racing">Bicicletas Racing</option>
+                                    <option value="aero">Bicicletas Aero</option>
+                                </optgroup>
+                            </select></label>
+                             
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="contain">
+                        <div>
+                            <label for="accesorios">Accesorios:</label>
+                            <select name="accesorios" id="accesorios" multiple size="6">
+                                <option>sin accesorios</option>
+                                <option>Ruedines</option>
+                                <option>Hinchadores</option>
+                                <option>Rodillos</option>
+                                <option>Bomba de aire</option>
+                                <option>Alforja</option>
+                                <option>Silla portabebés</option>
+                            </select>
+                        </div>
+                    </div>
 
-                    <label for="">Color de la bicicleta</label>
-                    <input type="color">
+                    <div class="contain">
+                        <div>
+                            <label for="marca">¿Qué marca era?</label>
+                            <input type="text" id="marca" name="marca" placeholder="Escribe o elige una marca" list="marcas" required>
+                            <datalist id="marcas">
+                                <option value="specialized"></option>
+                                <option value="trek"></option>
+                                <option value="merida"></option>
+                                <option value="scott"></option>
+                                <option value="giant"></option>
+                                <option value="cube"></option>
+                                <option value="lapierre"></option>
+                                <option value="orbea"></option>
+                                <option value="cannondale"></option>
+                                <option value="bmc"></option>
+                                <option value="canyon"></option>
+                                <option value="look"></option>
+                                <option value="protek"></option>
+                                <option value="megamo"></option>
+                                <option value="pinarello"></option>
+                                <option value="bianchi"></option>
+                                <option value="bh"></option>
+                                <option value="factor"></option>
+                                <option value="ghost"></option>
+                                <option value="cervélo"></option>
+                                <option value="argon"></option>
+                            </datalist>
+                        </div>
+                    </div>
 
-                    <label for="">Rango de precio</label>
-                    <select name="" id=""></select>
-
-                    <label for="">Tipo de bicicleta</label>
-                    <select name="" id=""></select>
+                    <div class="contain btncontain">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Enviar reporte</button>
+                    </div>
                 </fieldset>
             </form>
         </main>
